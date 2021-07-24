@@ -1,0 +1,84 @@
+{
+    "products":[
+        {
+            "id":1,
+            "name":"iPhone 12 Pro",
+            "desc":"Apple iphone brand new",
+            "price":999,
+            "color":"#33505a",
+            "image":"https://images-na.ssl-images-amazon.com/images/I/71hIfcIPyxS._SL1500_.jpg"
+        },
+        {
+            "id":2,
+            "name":"HP Laptop",
+            "desc":"21.5 inch",
+            "price":1200,
+            "color":"#33505a",
+            "image":"https://images-eu.ssl-images-amazon.com/images/I/51lUOfAUQ5L._AC_SX184_.jpg"
+        },
+        {
+            "id":3,
+            "name":"Gorilla Pod Tripod",
+            "desc":"Photon 13 inch",
+            "price":1000,
+            "color":"#33505a",
+            "image":"https://images-eu.ssl-images-amazon.com/images/I/31R57GvM9PL._AC_SX184_.jpg"
+        },
+        {
+            "id":4,
+            "name":"Wired Headset",
+            "desc":"Acer predator 311",
+            "price":50,
+            "color":"#33505a",
+            "image":"https://images-na.ssl-images-amazon.com/images/I/71hIfcIPyxS._SL1500_.jpg"
+        },
+        {
+            "id":5,
+            "name":"JBL Wireless Earphones",
+            "desc":"Deep Bass",
+            "price":5,
+            "color":"#33505a",
+            "image":"https://m.media-amazon.com/images/I/31N9z2rXiBL.jpg"
+        },
+        {
+            "id":6,
+            "name":"Harman Kardon",
+            "desc":"Premium Wireless",
+            "price":1000,
+            "color":"#33505a",
+            "image":"https://images-eu.ssl-images-amazon.com/images/I/31PTScka3nL._AC_SX184_.jpg"
+        },
+        {
+            "id":7,
+            "name":"iPhone 12 Pro",
+            "desc":"Apple iphone brand new",
+            "price":999,
+            "color":"#33505a",
+            "image":"https://images-na.ssl-images-amazon.com/images/I/71hIfcIPyxS._SL1500_.jpg"
+        },
+        {
+            "id":8,
+            "name":"iPhone 12 Pro",
+            "desc":"Apple iphone brand new",
+            "price":999,
+            "color":"#33505a",
+            "image":"https://images-na.ssl-images-amazon.com/images/I/71hIfcIPyxS._SL1500_.jpg"
+        },
+        {
+            "id":9,
+            "name":"iPhone 12 Pro",
+            "desc":"Apple iphone brand new",
+            "price":999,
+            "color":"#33505a",
+            "image":"https://images-na.ssl-images-amazon.com/images/I/71hIfcIPyxS._SL1500_.jpg"
+        },
+        {
+            "id":1,
+            "name":"iPhone 12 Pro",
+            "desc":"Apple iphone brand new",
+            "price":999,
+            "color":"#33505a",
+            "image":"https://images-na.ssl-images-amazon.com/images/I/71hIfcIPyxS._SL1500_.jpg"
+        }
+    ]
+}
