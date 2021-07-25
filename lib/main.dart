@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
     );
   }
-
+static Color creamColor = Color(0xfff5f5f5);
+static Color darkBluish = Color(0xff403b58);
  
-  
 }
