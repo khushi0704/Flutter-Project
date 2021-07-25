@@ -30,7 +30,7 @@
             "desc":"Acer predator 311",
             "price":50,
             "color":"#33505a",
-            "image":"https://images-na.ssl-images-amazon.com/images/I/71hIfcIPyxS._SL1500_.jpg"
+            "image":"https://images-eu.ssl-images-amazon.com/images/I/41iXgc-X2DS._AC_SX184_.jpg"
         },
         {
             "id":5,
@@ -50,35 +50,11 @@
         },
         {
             "id":7,
-            "name":"iPhone 12 Pro",
-            "desc":"Apple iphone brand new",
-            "price":999,
+            "name":"Laptop Backpack Black",
+            "desc":"ASUS TUF Gaming",
+            "price":899,
             "color":"#33505a",
-            "image":"https://images-na.ssl-images-amazon.com/images/I/71hIfcIPyxS._SL1500_.jpg"
-        },
-        {
-            "id":8,
-            "name":"iPhone 12 Pro",
-            "desc":"Apple iphone brand new",
-            "price":999,
-            "color":"#33505a",
-            "image":"https://images-na.ssl-images-amazon.com/images/I/71hIfcIPyxS._SL1500_.jpg"
-        },
-        {
-            "id":9,
-            "name":"iPhone 12 Pro",
-            "desc":"Apple iphone brand new",
-            "price":999,
-            "color":"#33505a",
-            "image":"https://images-na.ssl-images-amazon.com/images/I/71hIfcIPyxS._SL1500_.jpg"
-        },
-        {
-            "id":1,
-            "name":"iPhone 12 Pro",
-            "desc":"Apple iphone brand new",
-            "price":999,
-            "color":"#33505a",
-            "image":"https://images-na.ssl-images-amazon.com/images/I/71hIfcIPyxS._SL1500_.jpg"
+            "image":"https://m.media-amazon.com/images/I/31kFODuUIBL.jpg"
         }
     ]
 }

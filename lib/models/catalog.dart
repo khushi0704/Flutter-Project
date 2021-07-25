@@ -1,14 +1,6 @@
 class CatalogModel {
   static List<Item> items = [
-    Item(
-      id: 1,
-      name: "iphone12 Pro",
-      desc: "New Apple iPhone 12 (64GB) - Purple Visit the Apple",
-      price: 999,
-      color: "#33505a",
-      image:
-          "https://images-na.ssl-images-amazon.com/images/I/71hIfcIPyxS._SL1500_.jpg",
-    )
+   
   ];
 }
 
