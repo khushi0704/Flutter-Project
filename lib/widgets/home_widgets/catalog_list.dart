@@ -52,7 +52,7 @@ class CatalogItem extends StatelessWidget {
           children: [
             catalog.name.text.lg.bold.make(),
             catalog.desc.text.gray500.lg.bold.make(),
-            ButtonBar(
+           ButtonBar(
               alignment: MainAxisAlignment.spaceBetween,
               buttonPadding:Vx.mOnly(right:16),
               children: [
@@ -65,7 +65,7 @@ class CatalogItem extends StatelessWidget {
                   child: "Buy".text.make(),
                   )
               ],
-            )
+            ),
           ],
         ))
       ],

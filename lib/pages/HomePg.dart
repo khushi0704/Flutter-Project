@@ -35,6 +35,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Color(0xfff5f5f5),
       body: SafeArea(
+ 
         child: Container(
             padding: Vx.m32,
             child: Column(
