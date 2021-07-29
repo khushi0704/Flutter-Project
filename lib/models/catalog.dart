@@ -1,7 +1,12 @@
+//import 'dart:convert';
+
 class CatalogModel {
-  static List<Item> items = [
-   
-  ];
+  static List<Item> items = [];
+  //get item by id
+  static Item getById(int id) =>
+      items.firstWhere((element) => element.id == id, orElse: null);
+  //get item by position
+  static Item getByPosition(int pos) => items[pos];
 }
 
 class Item {
@@ -12,14 +17,15 @@ class Item {
   final String color;
   final String image;
 
-  Item({required this.id,
+  Item(
+      {required this.id,
       required this.name,
       required this.desc,
       required this.price,
       required this.color,
       required this.image});
 
-  factory Item.fromMap(Map<String,dynamic>map) {
+  factory Item.fromMap(Map<String, dynamic> map) {
     return Item(
       id: map["id"],
       name: map["name"],
@@ -31,11 +37,11 @@ class Item {
   }
 
   toMap() => {
-    "id" : id,
-    "name" : name,
-    "desc" : desc,
-    "price" : price,
-    "color" : color,
-    "image" : image
-  };
+        "id": id,
+        "name": name,
+        "desc": desc,
+        "price": price,
+        "color": color,
+        "image": image
+      };
 }

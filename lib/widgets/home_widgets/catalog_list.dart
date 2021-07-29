@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application/models/catalog.dart';
 import 'package:flutter_application/pages/home_detailsPg.dart';
@@ -12,20 +11,20 @@ class CatalogList extends StatelessWidget {
       shrinkWrap: true,
       itemCount: CatalogModel.items.length,
       itemBuilder: (context, index) {
-        final catalog = CatalogModel.items[index];
+        final catalog = CatalogModel.getByPosition(index);
         return InkWell(
-          onTap: () => Navigator.push(
-            context,MaterialPageRoute(
-              builder: (context)=>HomeDetailsPg(
-                catalog: catalog)
-                )
-                ),
-          child: CatalogItem(catalog: catalog)
-          );
+            onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => HomeDetailsPg(catalog: catalog))),
+            child: CatalogItem(
+              catalog: catalog
+              ));
       },
     );
   }
 }
+
 class CatalogItem extends StatelessWidget {
   final Item catalog;
 
@@ -41,10 +40,9 @@ class CatalogItem extends StatelessWidget {
         child: Row(
       children: [
         Hero(
-          tag: Key(catalog.id.toString()), 
-          child: 
-          CatalogImage(image: catalog.image),
-          ),
+          tag: Key(catalog.id.toString()),
+          child: CatalogImage(image: catalog.image),
+        ),
         Expanded(
             child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,24 +50,24 @@ class CatalogItem extends StatelessWidget {
           children: [
             catalog.name.text.lg.bold.make(),
             catalog.desc.text.gray500.lg.bold.make(),
-           ButtonBar(
+            ButtonBar(
               alignment: MainAxisAlignment.spaceBetween,
-              buttonPadding:Vx.mOnly(right:16),
+              buttonPadding: Vx.mOnly(right: 16),
               children: [
                 "\$${catalog.price}".text.red500.xl.bold.make(),
-                  ElevatedButton(
-                  onPressed:(){}, 
-                  style:ButtonStyle(
-                    shape:MaterialStateProperty.all(StadiumBorder(),)
-                  ),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ButtonStyle(
+                      shape: MaterialStateProperty.all(
+                    StadiumBorder(),
+                  )),
                   child: "Add to cart".text.make(),
-                  )
+                )
               ],
             ),
           ],
         ))
       ],
-    )
-    ).white.rounded.square(150).make().p4();
+    )).white.rounded.square(150).make().p4();
   }
 }
