@@ -13,21 +13,20 @@ class  HomeDetailsPg extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar : AppBar(),
-      backgroundColor: Vx.white,
       bottomNavigationBar:  ButtonBar(
-              alignment: MainAxisAlignment.spaceBetween,
-              buttonPadding:Vx.mOnly(right:16),
-              children: [
-                "\$${catalog.price}".text.red500.xl4.bold.make(),
-                  ElevatedButton(
-                  onPressed:(){}, 
-                  style:ButtonStyle(
-                    shape:MaterialStateProperty.all(StadiumBorder(),)
-                  ),
-                  child: "Buy".text.make(),
-                  ).wh(100,50)
-              ],
-            ).p32(),
+        alignment: MainAxisAlignment.spaceBetween,
+        buttonPadding:Vx.mOnly(right:16),
+        children: [
+          "\$${catalog.price}".text.red500.xl4.bold.make(),
+            ElevatedButton(
+            onPressed:(){}, 
+            style:ButtonStyle(
+              shape:MaterialStateProperty.all(StadiumBorder(),)
+            ),
+            child: "Add to cart".text.make(),
+            ).wh(130,50)
+        ],
+        ).p32(),
       body:SafeArea(
       bottom: false,
       child: Column(
@@ -36,6 +35,7 @@ class  HomeDetailsPg extends StatelessWidget {
            tag: Key(catalog.id.toString()), 
             child: Image.network(catalog.image).p12(),
           ).h32(context),
+
           Expanded(
             child:VxArc(
               height: 30.0,
@@ -44,11 +44,13 @@ class  HomeDetailsPg extends StatelessWidget {
             child: Container(
               width: context.screenWidth,
             child: Column(
-                children: [
-                  catalog.name.text.xl4.make(),
-                  catalog.desc.text.gray500.xl.make(),10.heightBox
-                ],
-                ).py32(),
+              children: [
+                catalog.name.text.xl4.make(),
+                catalog.desc.text.gray500.xl.make(),
+                10.heightBox,
+                "Learn Flutter from basics to advanced in just 8+ hours. This covers everything related to UI, Data, Model, API, State Management, Navigator 2.0 and more".text.gray500.make().px16(), 
+              ],
+              ).py32(),
             ),
             ),
             )

@@ -62,13 +62,14 @@ class CatalogItem extends StatelessWidget {
                   style:ButtonStyle(
                     shape:MaterialStateProperty.all(StadiumBorder(),)
                   ),
-                  child: "Buy".text.make(),
+                  child: "Add to cart".text.make(),
                   )
               ],
             ),
           ],
         ))
       ],
-    )).white.rounded.square(150).make().p4();
+    )
+    ).white.rounded.square(150).make().p4();
   }
 }
