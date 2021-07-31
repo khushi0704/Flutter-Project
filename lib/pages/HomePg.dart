@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_application/core/store.dart';
+import 'package:flutter_application/models/cart.dart';
 import 'dart:convert';
 import 'package:flutter_application/models/catalog.dart';
 import 'package:flutter_application/utils/routes.dart';
@@ -34,12 +36,17 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final _cart = (VxState.store as MyStore).cart;
     return Scaffold(
       backgroundColor: Color(0xfff5f5f5),
-      floatingActionButton:FloatingActionButton(
-        onPressed: ()=>Navigator.pushNamed(context,MyRoutes.cartRoute),
-          child: Icon(CupertinoIcons.cart),
-          ),
+      floatingActionButton:VxBuilder(
+        mutations: {AddMutation,RemoveMutation},
+        builder: (ctx,_,status)=>FloatingActionButton(
+        onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
+        child: Icon(CupertinoIcons.cart)
+        
+      ).badge(color: Vx.red500, size: 20,count: _cart.items.length),
+      ),
       body: SafeArea(
         child: Container(
             padding: Vx.m32,
@@ -51,16 +58,10 @@ class _HomePageState extends State<HomePage> {
                 if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
                   CatalogList().py16().expand()
                 else
-                   CircularProgressIndicator().centered().py16(), 
+                  CircularProgressIndicator().centered().py16(),
               ],
-            )
-            ),
+            )),
       ),
     );
   }
 }
-
-
-
-
-
