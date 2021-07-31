@@ -2,9 +2,7 @@
 
 class CatalogModel {
 
- static final catModel = CatalogModel._internal();
-  CatalogModel._internal();
-  factory CatalogModel() => catModel;
+
   // catalog field
 
   static List<Item> items = [];
