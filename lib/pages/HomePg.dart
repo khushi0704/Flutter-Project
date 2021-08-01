@@ -9,6 +9,7 @@ import 'package:flutter_application/utils/routes.dart';
 import 'package:flutter_application/widgets/home_widgets/catalog_header.dart';
 import 'package:flutter_application/widgets/home_widgets/catalog_list.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:http/http.dart' as http;
 
 class HomePage extends StatefulWidget {
   @override
@@ -16,6 +17,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final url = "https://api.jsonbin.io/b/6106991fe45421158786ee23";
+
   @override
   void initState() {
     super.initState();
@@ -24,8 +27,10 @@ class _HomePageState extends State<HomePage> {
 
   loadData() async {
     await Future.delayed(Duration(seconds: 2));
-    final catalogJson =
-        await rootBundle.loadString("assets/files/catalog.json");
+
+    final response = 
+    await http.get(Uri.parse(url));
+    final catalogJson = response.body;
     final decodedData = jsonDecode(catalogJson);
     var productsData = decodedData["products"];
     CatalogModel.items = List.from(productsData)
@@ -39,13 +44,13 @@ class _HomePageState extends State<HomePage> {
     final _cart = (VxState.store as MyStore).cart;
     return Scaffold(
       backgroundColor: Color(0xfff5f5f5),
-      floatingActionButton:VxBuilder(
-        mutations: {AddMutation,RemoveMutation},
-        builder: (ctx,_,status)=>FloatingActionButton(
-        onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
-        child: Icon(CupertinoIcons.cart)
-        
-      ).badge(color: Vx.red500, size: 20,count: _cart.items.length),
+      floatingActionButton: VxBuilder(
+        mutations: {AddMutation, RemoveMutation},
+        builder: (ctx, _, status) => FloatingActionButton(
+                onPressed: () =>
+                    Navigator.pushNamed(context, MyRoutes.cartRoute),
+                child: Icon(CupertinoIcons.cart))
+            .badge(color: Vx.red500, size: 20, count: _cart.items.length),
       ),
       body: SafeArea(
         child: Container(
